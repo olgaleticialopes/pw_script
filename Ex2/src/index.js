@@ -1,4 +1,4 @@
-
+//#region Pitagoras
 function pitagorasH(ca,co) {
     return (Math.sqrt(Math.pow(ca,2) + Math.pow(co,2)));
 }
@@ -23,7 +23,7 @@ function calculaPitagoras(h,ca,co) {
 }
 
 
-
+//#region Regra de Tres
 function calculaA(b,c,d){
     return (b*c/d);
 }
@@ -52,9 +52,9 @@ function calculaRegra(a,b,c,d){
         return calculaD(a,b,c)
     }
 }
+//#endregion
 
-
-
+//#region Calculadora
 function calculaNumeros(op ,n1, n2,){
     debugger;
     if(op == "+"){
