@@ -1,0 +1,40 @@
+name: DemoTeste
+on:
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a on-line script
+        run: echo Hello, word!
+  
+  deploy-dev:
+    runs-on: ubuntu-latest
+    environment:
+      name: dev
+      url: 'victoricoma.com.br'
+    needs: build
+    steps:
+      - name: Run a on-line script
+        run: echo Teste, Deploy
+        
+  deploy-hmg:
+    runs-on: ubuntu-latest
+    environment:
+      name: hmg
+      url: 'victoricoma.com.br'
+    needs: deploy-dev
+    steps:
+      - name: Run a on-line script
+        run: echo Teste, Homologacao
+        
+  deploy-prd:
+    runs-on: ubuntu-latest
+    environment:
+      name: dev
+      url: 'victoricoma.com.br'
+    needs: deploy-hmg
+    steps:
+      - name: Run a on-line script
+        run: echo Teste, Producao

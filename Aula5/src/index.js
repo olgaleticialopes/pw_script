@@ -1,5 +1,6 @@
-function executatabuada(indice, multiplo){
-    for(let i =0;i<indice;i++)
-    console.log((i*multiplo));
+function executaTabuada(indice, multiplo){
+    for(let i=0;i<=indice; i++){
+        console.log((i * multiplo));
+    }
 }
-executatabuada(30,7);
+executaTabuada(30, 7);
